@@ -6,14 +6,13 @@
     - Turn on key-pad lights to indicate money has been calculated
   - Wait for human to click the code for the desired flavour on the key pad and press enter
     - Compare the price associated with code and money obtained
-      - If difference is 0 the bag of chips will be dropped down into accessible box
+      - If the difference is 0 the bag of chips will be dropped down into accessible box
       - If there's a remaining amount provide the same value of change into change bin
       - Otherwise the bag of chips will not be dropped down and key will display invalid
   - If change button is pressed before purchasing any items
       - All the inserted amount will be released into the change bin
-  
-  
-##Exploring the BASIC commands used
+ 
+##  Exploring the BASIC commands used
   - Conditional Branching: "If ... do..., else ... do..." statement. Certain conditions trigger another action to occur.
   - Loop: Repetition of a sequence of processes.
   - Nested Structure: Statements within another statement.
