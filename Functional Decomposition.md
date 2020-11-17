@@ -12,9 +12,9 @@
   - If change button is pressed before purchasing any items
       - All the inserted amount will be released into the change bin
       
-Conditional Branching: "If ... do..., else ... do..." statement. Certain conditions trigger another action to occur.
-Loop: Repetition of a sequence of processes.
-Nested Structure: Statements within another statement.
+  - Conditional Branching: "If ... do..., else ... do..." statement. Certain conditions trigger another action to occur.
+  - Loop: Repetition of a sequence of processes.
+  - Nested Structure: Statements within another statement.
   
 ##  The cookie is too big for the glass
 1. How to fix this problem
