@@ -11,7 +11,9 @@
       - Otherwise the bag of chips will not be dropped down and key will display invalid
   - If change button is pressed before purchasing any items
       - All the inserted amount will be released into the change bin
-      
+  
+  
+##Exploring the BASIC commands used
   - Conditional Branching: "If ... do..., else ... do..." statement. Certain conditions trigger another action to occur.
   - Loop: Repetition of a sequence of processes.
   - Nested Structure: Statements within another statement.
