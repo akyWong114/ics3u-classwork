@@ -1,20 +1,24 @@
-print ("What is your favourite colour: ")
-favouriteColour = input ()
-print ( favouriteColour, "!? No way, that's my favourite colour too! ")
+print("What is your favourite colour: ")
+favourite_Colour = input ()
+print (favourite_Colour, "?! No way, that's my favourite colour too! ")
 
-numberCansperPack = int(input("How many cans per package: "))
-numberPack = int(input("How many packages are there: "))
+#don't put have spaces between functions
 
-numberCans = numberCansperPack * numberPack
+number_Cans_per_Pack = int(input("How many cans per package: "))
+number_Pack = int(input("How many packages are there: "))
 
-print(f'There are {numberCans} in a pack. ')
+number_Cans = number_Cans_per_Pack * number_Pack
 
-print ("please enter the following in Litres")
+print(f'There are {number_Cans} in a pack. ')
+
+print ("please enter the following in cm")
 print("please enter the length of the length: ")
 length = float (input())
 print ("please enter the width: ")
+
 width = float (input())
 print ("please enter the height: ")
+
 height = float (input())
 volume = length * width * height
-print ("The total volume is", volume, "litres")
+print ("The total volume is", volume, "mL")
