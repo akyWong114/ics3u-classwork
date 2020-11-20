@@ -2,8 +2,8 @@ print("What is your favourite colour: ")
 favourite_Colour = input ()
 print (favourite_Colour, "?! No way, that's my favourite colour too! ")
 
-#don't put have spaces between functions
-
+#don't put have spaces between functions: unless it's * = , or 
+# use _ like "number_Pack" to divide them
 number_Cans_per_Pack = int(input("How many cans per package: "))
 number_Pack = int(input("How many packages are there: "))
 
@@ -21,4 +21,4 @@ print ("please enter the height: ")
 
 height = float (input())
 volume = length * width * height
-print ("The total volume is", volume, "mL")
+print ("The total volume is" {volume} "mL")
