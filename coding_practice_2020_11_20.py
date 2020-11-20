@@ -10,14 +10,9 @@ number_Cans = number_Cans_per_Pack * number_Pack
 
 print(f'There are {number_Cans} in a pack. ')
 print("please enter the following in cm")
-print("please enter the length of the length: ")
-length = float(input())
-print("please enter the width: ")
-
-width = float(input())
-print("please enter the height: ")
-
-height = float(input())
+length = int(input("please enter the length of the length: "))
+width = int(input("please enter the width: "))
+height = int(input("please enter the height: "))
 volume = length * width * height
 print("The total volume is",volume, "mL.")
 
