@@ -145,18 +145,6 @@ elif x == y or y == z or z == x:
 else:
     print("scalene triangle")  
 
-#Exercise 41 - Note to Frequency
-def getFrequency(note, A4=440):
-    notes = ['A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#']
-    octave = int(note[2]) if len(note) == 3   else int(note[1])
-    key_number = notes.index(note[1]);
-
-    if (key_number < 3) :
-        key_number = key_number + 12 + ((octave - 1) * 12) + 1;
-    else: 
-        key_number = key_number + ((octave - 1) * 12) + 1;
-    return A4 * 2** ((keyNumber - 49) / 12)
-
 #Exercise 43 - Faces on Money
 banknote = int(input("Enter the denomination of the individual bank note amount: $"))
 if banknote == 1:
@@ -179,16 +167,11 @@ else:
 #Exercise 45: What Colour is that Square?
 while True:
     oddset = ['a', 'c', 'e', 'g']
-    evenset = ['b', 'b', 'f', 'h']
+    evenset = ['b', 'd', 'f', 'h']
     odd_numbers = [1, 2, 3, 4, 7]
     even_numbers = [2, 3, 6, 8]
     letter = input("Enter the letter:")
-    while True:
-        try:
-            number = int(input("Enter the number: "))
-            break
-        except ValueError:
-            print("Number must be an integer.")
+    number = int(input("Enter the number: ")
     if letter.lower() in oddset and number in odd_numbers:
         print("It's a black square!")
     elif letter.lower() in evenset and number in odd_numbers:
