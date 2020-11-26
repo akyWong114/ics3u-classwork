@@ -138,31 +138,34 @@ x = int(input("x: "))
 y = int(input("y: "))
 z = int(input("z: "))
 
-if x == y == z:
+if x == y and x == z:
     print("equilateral triangle")
 elif x == y or y == z or z == x:
     print("isosceles triangle")
 else:
     print("scalene triangle")  
 
-#Exercise 41 - Note to Frequency
-def getFrequency(note, A4=440):
+# Exercise 41 - Note to Frequency
+# I don't get what you are trying to do here. The question wants you to take the notes CDEFGAB from the user and display it's frequency for different octaves.
+def get_frequency(note, A4 = 440):
+# Avoid using captial letters when naming functions (You can search up the naming scheme online)
     notes = ['A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#']
+# I don't think the question cared about sharps
     octave = int(note[2]) if len(note) == 3   else int(note[1])
     key_number = notes.index(note[1]);
 
-    if (key_number < 3) :
-        key_number = key_number + 12 + ((octave - 1) * 12) + 1;
+    if key_number < 3 :
+        key_number = key_number + 12 + ((octave - 1) * 12) + 1
     else: 
-        key_number = key_number + ((octave - 1) * 12) + 1;
-    return A4 * 2** ((keyNumber - 49) / 12)
+        key_number = key_number + ((octave - 1) * 12) + 1
+    return A4 * 2** ((key_number - 49) / 12)
 
 #Exercise 43 - Faces on Money
 banknote = int(input("Enter the denomination of the individual bank note amount: $"))
 if banknote == 1:
     print("George Washington")
 elif banknote == 2:
-    print("Thoman Jefferson")
+    print("Thomas Jefferson")
 elif banknote == 5:
     print("Abraham Lincoln")
 elif banknote == 10:
@@ -179,16 +182,13 @@ else:
 #Exercise 45: What Colour is that Square?
 while True:
     oddset = ['a', 'c', 'e', 'g']
-    evenset = ['b', 'b', 'f', 'h']
-    odd_numbers = [1, 2, 3, 4, 7]
-    even_numbers = [2, 3, 6, 8]
+    evenset = ['b', 'd', 'f', 'h']
+    odd_numbers = [1, 3, 5, 7]
+    even_numbers = [2, 4, 6, 8]
     letter = input("Enter the letter:")
     while True:
-        try:
-            number = int(input("Enter the number: "))
-            break
-        except ValueError:
-            print("Number must be an integer.")
+
+# try and except is specifically for debugging. You can replace this with a if statement. 
     if letter.lower() in oddset and number in odd_numbers:
         print("It's a black square!")
     elif letter.lower() in evenset and number in odd_numbers:
@@ -199,6 +199,24 @@ while True:
         print("It's a white sqaure!")
     else:
         print("You must enter a letter.")
+# while True:
+#     oddset = ['a', 'c', 'e', 'g']
+#     evenset = ['b', 'd', 'f', 'h']
+#     odd_numbers = [1, 3, 5, 7]
+#     even_numbers = [2, 4, 6, 8]
+#     letter = input("Enter the letter:")
+#     number = int(input("Enter the number: "))
+    
+#     if letter.lower() in oddset and number in odd_numbers:
+#         print("It's a black square!")
+#     elif letter.lower() in evenset and number in odd_numbers:
+#         print("It's a white square!")
+#     elif letter.lower() in evenset and number in even_numbers:
+#         print("It's a black square!")
+#     elif letter.lower() in oddset and number in even_numbers:
+#         print("It's a white sqaure!")
+#     else:
+#         print("You must enter a letter.")
 
 #Exercise 46 - Season from Month and Day
 month = input("Please enter the month: ").lower()
@@ -212,13 +230,15 @@ elif month in ('july', 'august', 'september'):
     season = 'summer'
 else: 
     season = 'autumn'
-if (month == 'march') and (day > 19):
+# Leave a space for formatting (or it will look like a single if statement)
+if month == 'march' and day > 19:
     season == 'spring'
-elif (month == 'june') and (day > 20):
+elif month == 'june' and day > 20:
     season = 'summer'
-elif (month == 'september') and (day > 21):
+elif month == 'september' and day > 21:
     season = 'autumn'
-elif (month == 'december') and (day > 20):
+elif month == 'december' and day > 20:
     season = 'winter'
 
+# You don't need to have parenthesis for if statemnets (redundent)
 print(f"The season is {season}.")
