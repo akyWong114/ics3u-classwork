@@ -1,0 +1,174 @@
+# Grade 10 CPT
+# Grade 10 CPT
+
+mini_game_1_played = False
+mini_game_2_played = False
+mini_game_3_played = False
+mini_game_4_played = False
+
+completion_score = 0
+alive = True
+
+while completion_score < 100 and alive == True:
+    # print options
+    print(f"Progress: {completion_score}/100")
+    print("Main Menu")
+    print("Select mini game")
+
+    print("[1] Reset the power")
+    print("[2] Feed the Raptors")
+    print("[3] minigame 3")
+    print("[4] minigame 4")
+    print()
+
+    # get choice
+    choice = input("choice: ")
+
+    # handle choice
+    if choice == "1":
+        print("RESET THE POWER")
+        print("You need to prime the grid thrice, then press the geen button to reset it.")
+        primes = 0
+        complete = False
+        while complete == False:
+            # display options
+            print("[1] Prime power grid")
+            print("[2] Push green button")
+
+            # get choice
+            choice = input("choice: ")
+
+            # handle choice
+            if choice == "1":
+                print("You prime the grid")
+                primes += 1
+            elif choice == "2":  # push button
+                complete = True
+                if primes != 3:
+                    print("The ship blows up!")
+                    alive = False
+                else:
+                    print("You successfully reset the power grid.")
+                    
+                    if mini_game_1_played == False:
+                        print("You get 25 completion points")
+                        completion_score += 25
+                        mini_game_1_played = True
+            
+            print()
+        
+    elif choice == "2":
+        print("FEED THE RAPTORS")
+        print("Load a cow onto a gurney and use the crane to lower it into the raptor pen.")
+        print("If you lower the gurney without a cow, the raptors will revolt and eat everyone on board.")
+
+        cow_on_gurney = False
+        complete = False
+        while complete == False:
+            # options
+            print("[1] load cow onto gurney")
+            print("[2] Lower gurney into pen")
+
+            # get choice
+            choice = input("choice: ")
+
+            # handle choice
+            if choice == "1":  # place cow
+                print("You place the cow on the gurney.")
+                cow_on_gurney = True
+            elif choice == "2":  # lower gurney
+                complete = True
+                print("You lower the gurney into the pen.")
+                if cow_on_gurney == True:  # WIN
+                    print("Your feed the raptors.")
+                    print("They are happy.")
+
+                    if mini_game_2_played == False:
+                        print("You earn 25 completion points.")
+                        completion_score += 25
+                        mini_game_2_played = True
+                else:
+                    print("There was no cow on the gurney!")
+                    print("The raptors revolt and eat everyone.")
+                    alive = False
+
+            
+            print()
+
+    elif choice == "3":
+        print("FIX THE WIRING")
+        print("The main orbital control console on the space station is behaving erratically.")
+        print("There are four usb cables that have been removed from their ports BLUE, YELLOW, GREEN, and BLACK.")
+        print("You need to plug the USB cables back ino their proper ports with the following map.")
+        print("Cable colour, Port number:")
+        print("BLUE, 1")
+        print("YELLOW, 2")
+        print("GREEN, 3")
+        print("BLACK, 4")
+        print("If cables and ports are not connected accordingly the ship will exploud.")
+        wire_connected = False
+        complete = False
+        while complete == False:
+            #options
+            choice = input("What port number is connected to YELLOW?: ")
+            choice_2 = input("What port number is connected to BLUE?: ")
+            choice_3 = input("What port number is BLACK? ")
+            choice_4= input("What port number is GREEN?: ")
+            if choice == '2' and choice_2 == '1' and choice_3 == '4' and choice_4 == '3':
+                complete = True
+                print('Congratulations, you successfully connected each port and cable accordingly! The space station is now at rest. Now you may celebrate!')
+
+                if mini_game_3_played == False:
+                    print("You earn 25 completion points.")
+                    completion_score += 25
+                    mini_game_3_played = True
+            else:
+                print("You have been electricuted!! How shocking :(")
+                alive = False
+
+        print()
+    elif choice == "4":
+        print("UPLOAD LOG FILES")
+        print("Your log files need to be uploaded to the space station's main server. Please enter the daily password and then upload the log files.")
+        print("If password is incorrect you will be considered an impostor and will get yeeted out of the space station.")
+        import random
+        def get_random_string(length):
+            numbers = '123456789'
+            result_str = ''.join((random.choice(numbers) for i in range(length)))
+            print(f"Password listed on sticky note is {result_str}")
+            password = get_random_string(4)
+            write_password = input("Please enter your given password: ")
+            if password == write_password:
+                complete = True
+                print('Congratulations! You are declared a crewmate and was not yeeted out of the spaceship')
+                for i in range (10):
+                    print("\n" * 30)
+                    print('Uploading Log Files')
+                    print("█" * i * 2)
+                    time.sleep(0.4)
+                print('\n' * 30)
+                print("Complete!")
+                print("█" * 20)
+        
+                if mini_game_4_played == False:
+                    print("You earned 25 completion points!") 
+                    completion_score += 25
+                    mini_game_4_played = True
+                else:
+                    print('You have been labelled as an impostor and have been yeeted out. To a place of utter lonlieness.')
+                    alive = False
+        print()
+    
+    
+    
+    else:
+        print("Invalid option")
+
+
+
+
+if alive == False:
+    print("Congratulations. You died. :(")
+
+if completion_score == 100:
+    print("Congratulations. You win! :)")
