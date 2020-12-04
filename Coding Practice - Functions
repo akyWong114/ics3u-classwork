@@ -17,30 +17,32 @@ def add(a:int, b:int, c:int) -> int:
 	"""
 	return a + b + c
 
-result = add(3,5,8)
+result = add(3, 5, 8)
 print(result)
 
 #2. Create a function that takes a name and an age and returns a string message including both pieces of data.
-def person(name:str, age:int):
+def person(name: str, age: int) -> str:
 	return str(name) + ', ' + str(age)
 
 string = person('May', 4)
 print(f"This next person is named {string} is her age.")
 #string = ... = calling the function
 
+#another way - preferable way
+def greeting(name: str, age:int) -> str:
+    return f"Hello {name}. So are you {age} years old?"
+
+message = greeting("Dave", 56)
+print(message)
 #3. Create a function that takes two numbers and returns the average of those numbers.
-def average(a:int, b:int):
+def average_2(a: float, b: float) -> float:
     return (a + b) / 2
 
-result = average(3,7)
+result = average_2(3, 7)
 print(result)
 
-
-# is there an average sumbol we could use?
-#what would we do if it was not an int
-
 #4. Create a function that takes three numbers and returns the largest (don't use max).
-def largest(x:int, y:int, z: int) -> int:
+def largest_three(x:int, y:int, z: int) -> int:
 	if x >= y  and x >= z:
 		return x
 	elif y >= x and y >= z:
@@ -48,9 +50,9 @@ def largest(x:int, y:int, z: int) -> int:
 	else:
 		return z
 
-result = largest(4,1,9)
+result = largest_three(4,1,9)
 print(result)
-
+#use >=
 
 #5. Create a function that takes a string and returns the first two characters.
 def two_letters(word:str) -> str:
@@ -58,3 +60,4 @@ def two_letters(word:str) -> str:
 
 string = (two_letters('word'))
 print(string)
+	
