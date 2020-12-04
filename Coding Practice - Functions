@@ -1,0 +1,60 @@
+#Define the function
+#Define the parameters
+#Return the result
+#Call the function and send the arguments.
+#Handle the return value by placing it in a variable. Print it out.
+#1. Create a function that takes three numbers and adds them together.
+def add(a:int, b:int, c:int) -> int:
+	""""Add two numbers together.
+
+	Args:
+		a: A number
+		b: Another number
+		c: Another number
+	
+	Returns:
+		The sum of the numbers.
+	"""
+	return a + b + c
+
+result = add(3,5,8)
+print(result)
+
+#2. Create a function that takes a name and an age and returns a string message including both pieces of data.
+def person(name:str, age:int):
+	return str(name) + ', ' + str(age)
+
+string = person('May', 4)
+print(f"This next person is named {string} is her age.")
+#string = ... = calling the function
+
+#3. Create a function that takes two numbers and returns the average of those numbers.
+def average(a:int, b:int):
+    return (a + b) / 2
+
+result = average(3,7)
+print(result)
+
+
+# is there an average sumbol we could use?
+#what would we do if it was not an int
+
+#4. Create a function that takes three numbers and returns the largest (don't use max).
+def largest(x:int, y:int, z: int) -> int:
+	if x >= y  and x >= z:
+		return x
+	elif y >= x and y >= z:
+		return y
+	else:
+		return z
+
+result = largest(4,1,9)
+print(result)
+
+
+#5. Create a function that takes a string and returns the first two characters.
+def two_letters(word:str) -> str:
+    return word[:2]
+
+string = (two_letters('word'))
+print(string)
