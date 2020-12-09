@@ -1,0 +1,279 @@
+#Codingbat List-1(10 Questions)
+#first_last_6
+#given in array of ints 
+from typing import List
+
+def first_last_6(nums: List[int]) -> bool:
+    if nums[0] == 6 or nums [-1] == 6:
+        return True
+    else:
+        return False
+    pass
+
+
+result = first_last_6([1, 2, 6])
+print(result)
+
+#same_first_last
+from typing import List
+
+def same_first_last(nums: List[int]) -> bool:
+    if nums[0] == nums[-1]:
+        return True
+    else:
+        return False
+
+result = same_first_last([1, 2, 3])
+print(result)
+
+#3. make_pi
+from typing import List
+def make_pi(nums:List[int]) -> List[int]:
+    return nums
+
+result = make_pi([3,1,4])
+print(result)
+
+#4. common_end
+from typing import List
+
+def common_end(a: List[int], b: 
+List[int]) -> bool:
+    if a[0] == b[0] or a[-1] == b[-1]:
+        return True
+    else:
+        return False
+    pass
+
+
+result = common_end([1, 2, 3], [7, 3])
+print(result)
+
+#5. sum_3
+from typing import List
+    
+def sum_3(nums: List[int]) -> int:
+    return sum(nums)
+    pass
+
+
+result = sum_3([1, 2, 3])
+print(result)
+
+#6 rotate_left_3
+from typing import List
+
+def rotate_left_3(nums: List[int]) -> List[int]:
+    return [nums[1], nums[2], nums[0]]
+    pass
+
+result = rotate_left_3([1, 2, 3])
+print(result)
+
+#7 reverse_3
+from typing import List
+
+def reverse_3(nums: List[int]) -> List[int]:
+    return [nums[2], nums[1], nums[0]]
+    pass
+
+result = reverse_3([1, 2, 3])
+print(result)
+
+#8 max_end_3
+from typing import List
+
+def max_end_3(nums: List[int]) -> List[int]:
+    return [3] * 3
+    pass
+
+result = max_end_3([1, 2, 3])
+print(result)
+
+#8 sum_2
+from typing import List
+
+
+def sum_2(nums: List[int]) -> int:
+    return sum(nums[:2])
+    pass
+
+
+result = sum_2([1, 2, 3])
+print(result)
+
+#9 middle_way
+from typing import List
+
+
+def middle_way(a: List[int], b: List[int]) -> List[int]:
+    return a[1], b[1]
+    pass
+
+
+result = middle_way([1, 2, 3], [4, 5, 6])
+print(result)
+
+#10 make_ends
+from typing import List
+
+def make_ends(nums: List[int]) -> List[int]:
+    return [nums[0], nums[-1]]
+    pass
+
+
+result = make_ends([1, 2, 3])
+print(result)
+
+#Codingbat List-2(10 Questions)
+#practice lists on codingbat
+
+#https://github.com/diezguerra/codingbat-python-solutions/blob/master/list-1.py
+
+##String 2 Questions
+#1. count_evens
+from typing import List
+def count_evens(nums: List[int]) -> int:
+    even_count = 0
+    for i in range(len(nums)):
+        if nums[i] % 2 == 0:
+            even_count += 1
+    return even_count
+result = count_evens([2, 1, 2, 3, 4])     
+print(result)
+
+#2. big_diff
+from typing import List
+def big_diff(nums: List[int]) -> int:
+    return max(nums) - min(nums)
+    pass
+
+result = big_diff([10, 3, 5, 6])
+print(result)
+
+#3.centered_average
+from typing import List
+def centered_average(nums: List[int]) -> int:
+    sum = 0
+    for i in nums:
+        sum += i
+    return (sum - min(nums) - max(nums)) / (len(nums) - 2)
+    pass
+
+result = centered_average([1, 2, 3, 4, 100])
+print(result)
+
+#4.sum_13
+from typing import List
+def sum_13(nums: List[int]) -> int:
+    if len(nums) == 0:
+        return 0
+    for i in range(0, len(nums)):
+        if nums[i] == 13:
+            nums[i] = 0
+            if i + 1 < len(nums):
+                nums[i+1] = 0
+    return sum(nums)
+    return
+    pass
+#ask to explain like 174
+result = sum_13([1, 2, 2, 1, 13])
+print(result)
+
+#5. sum_67
+from typing import List
+def sum_67(nums: List[int]) -> int:
+    for i in range(0, len(nums)):
+        if nums[i] == 6:
+            nums[i] = 0
+            for h in range(i+1, len(nums)):
+                others = nums[h]
+                nums[h] = 0
+                if others == 7:
+                    i = j + 1
+                    break
+    return sum(nums)
+    pass
+
+result = sum_67([1, 2, 2])
+print(result)
+
+#6. has_22
+from typing import List
+def has_22(nums: List[int]) -> bool:
+    index = nums.index(2)
+    if nums[index + 1] == 2:
+        return True
+    else:
+        return False
+
+result = has_22([1, 2, 2])
+print(result)
+
+#or
+def has22(nums):
+    for i in range(0, len(nums) - 1):
+        if nums[i] == 2 and nums[i + 1] == 2:
+            return True
+    return False
+result = has_22([1, 2, 2])
+print(result)
+
+#7.lucky_13
+from typing import List
+def lucky_13(nums: List[int]) -> bool:
+    for i in range(0, len(nums) - 1):
+        if nums[i] == 1 or nums[i + 1] == 3:
+            return False
+    return True
+    pass
+
+result = lucky_13([0, 2, 4])
+print(result)
+
+#8. sum_28
+from typing import List
+
+def sum_28(nums: List[int]) -> bool:
+    amount = 0
+    amount = nums.count(2)
+    if amount == 4:
+        return True
+    else:
+        return False    
+    pass
+
+result = sum_28([2, 3, 2, 2, 4, 2])
+print(result)
+
+#9. more_14
+from typing import List
+def more_14(nums: List[int]) -> bool:
+    amount = 0
+    amount = nums.count(1)
+    amount_2 = 0
+    amount = nums.count(4)
+    if amount > amount_2:
+        return True
+    else:
+        return False  
+    pass
+result = more_14([1, 4, 1])
+print(result)
+
+#ask mr.gallo to solve #10
+
+#10 only_14
+from typing import List
+def only_14(nums: List[int]) -> bool:
+    valid = False
+    for i in range(0, len(nums)):
+        if nums[i] == 1 or nums[i] == 4:
+            valid = True
+        else:
+            valid = False
+            break 
+    return valid
+result = only_14([1, 1, 2, 1])
+print(result)
+#what's the point of pass
