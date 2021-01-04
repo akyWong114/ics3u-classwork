@@ -1,0 +1,72 @@
+#i can do evtg its just that i was not fast enough to implement evtg.
+
+#81-85
+#Compute the Hypotenuse
+#add the parameters later
+#fix later
+def triangle_values():
+    first_length = float(input("Please enter the first length:\n"))
+    input
+    second_length = float(input("Please enter the second length:\n"))
+    compute_hypotenuse()
+def compute_hypotenuse():
+    triangle_values()
+    hypotenuse = sqrt(first_length * first length + second_length * second_length)
+    print(hypotenuse)
+
+#exercise 82: Taxi Fare
+def taxi_fare():
+    distance_traveled = float(input("Please enter the distance traveled in kilometers:\n"))
+    cost = (((distance_traveled * 1000) / 140) * 0.25) + 4
+    print(f"The total cost is ${cost}.")
+
+#exercise 83: shipping calculator
+def shipping_calculator():
+    n_items = int(input("Please enter the number of items you'd like to purchase:\n"))
+    shipping_charge = ((n_items - 1) * 2.95) + 10.95)
+    print(f"The shipping charge is ${chipping_charge}.")
+
+#exercise 84: median of three values
+def median_of_three_values():
+    first_n = float(input("Please enter the first value:\n"))
+    second_n = float(input("Please enter the second value:\n"))
+    third_n = float(input("Please enter the third value:\n"))
+    if first_n < second_n < third_n:
+        print(f"{second_n}")
+    elif third_n < second_n < first_n:
+        print(f"{second_n}")
+    elif second_n < first_n < third_n:
+        print(f"{third_n}")
+    elif 
+#NO TIME TO COMPLETE    
+#FINISH LATER
+
+#exercise 85: convert an integer to its ordinal number
+def make_ordinal(n:int) -> str:
+    n = int(input("Please enter the integer: "))
+    string = ''
+    if n == 1:
+        string += 'first'
+    elif n == 2:
+        string += 'second'
+    elif n == 3:
+        string += 'third'    
+    elif n == 4:
+        string += 'forth'
+    elif n == 5:
+        string += 'fifth'
+    elif n == 6:
+        string += 'sixth'
+    elif n == 7:
+        string += 'seventh'
+    elif n == 8:
+        string += 'eighth'
+    elif n == 9:
+        string += 'ninth'
+    elif n == 10:
+        string += 'tenth'
+    elif n == 11:
+        string += 'eleventh'
+    elif n == 12:
+        string += 'twelvth'
+    print(f"The string is {string}.")
