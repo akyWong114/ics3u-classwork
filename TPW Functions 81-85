@@ -10,16 +10,22 @@ def main_exercise81():
     while True:
         try:
             a = float(input("Please enter the length of side a:\n"))
-            b = float(input("Please enter the length of side b:\n"))
-            if a <= 0 or b <=0:
-                print("That is not a valid number.")
+            if a <= 0:
                 raise ValueError
             break
         except ValueError:
-            print("Must input a number.")
+            print('Invalid number.')
+    while True:
+        try:
+            b = float(input("Please enter the length of side b:\n"))
+            if b <= 0:
+                raise ValueError
+            break
+        except ValueError:
+            print('Invalid number.')
+                print("That is not a valid number.")
         #calculate the hyp
     hyp = hypotenuse(a, b)
-
     print(f"The hypotenuse is {hyp}.")
 
 def hypotenuse(a: float, b: float) -> float:
@@ -77,23 +83,33 @@ def median_of_three_values():
     while True:
         try:
             first_n = float(input("Please enter the first value:\n"))
+        except ValueError:
+            print('Not a number.')
+        try:
             second_n = float(input("Please enter the second value:\n"))
+        except ValueError:
+            print('Not a number.')
+        try:
             third_n = float(input("Please enter the third value:\n"))
-            if first_n < second_n < third_n:
-                print(f"{second_n}")
-            elif third_n < second_n < first_n:
-                print(f"{second_n}")
-            elif second_n < first_n < third_n:
-                print(f"{third_n}")
-            elif third_n < first_n < second_n:
-                print(f"{third_n}")
-            elif first_n < third_n < second_n:
-                print(f"{third_n}")
-            elif second_n < third_n < first_n:
-                print(f"{third_n}")
             break
         except ValueError:
-            print("Must input a number.")
+            print('Not a number.')
+        if first_n <= second_n <= third_n:
+            middle_num = second_n
+        elif third_n <= second_n <= first_n:
+            middle_num = second_n
+        elif second_n <= first_n <= third_n:
+            middle_num = first_n
+        elif third_n <= first_n <= second_n:
+            middle_num = first_n
+        elif first_n <= third_n <= second_n:
+            middle_num = third_n
+        elif second_n <= third_n <= first_n:
+            middle_num = third_n
+            
+    result = median()
+    print(f"{result} is the median.")
+
 
 #NO TIME TO COMPLETE    
 #FINISH LATER
