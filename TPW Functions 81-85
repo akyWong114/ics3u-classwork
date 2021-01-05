@@ -147,6 +147,7 @@ def make_ordinal(n:int) -> str:
                 string += 'twelvth'
             elif 1 > n or n > 12:
                 raise ValueError
+            break
         except ValueError:
             print("Must input a whole number between 1-12 (also can be 1-12).")
 
@@ -157,4 +158,4 @@ if __name__ == "__main__":
     main_exercise82()
     main_exercise83()
     median_of_three_values()
-    make_ordinal()
+    make_ordinal(str)
