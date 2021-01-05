@@ -1,72 +1,160 @@
-#i can do evtg its just that i was not fast enough to implement evtg.
-
 #81-85
 #Compute the Hypotenuse
 #add the parameters later
 #fix later
-def triangle_values():
-    first_length = float(input("Please enter the first length:\n"))
-    input
-    second_length = float(input("Please enter the second length:\n"))
-    compute_hypotenuse()
-def compute_hypotenuse():
-    triangle_values()
-    hypotenuse = sqrt(first_length * first length + second_length * second_length)
-    print(hypotenuse)
+import math 
+
+def main_exercise81():
+   #print(calculate_taxi_fare(140)) #should be 4
+    print("Welcome to the hypotenuse calculator!")
+    while True:
+        try:
+            a = float(input("Please enter the length of side a:\n"))
+            b = float(input("Please enter the length of side b:\n"))
+            if a <= 0 or b <=0:
+                print("That is not a valid number.")
+                raise ValueError
+            break
+        except ValueError:
+            print("Must input a number.")
+        #calculate the hyp
+    hyp = hypotenuse(a, b)
+
+    print(f"The hypotenuse is {hyp}.")
+
+def hypotenuse(a: float, b: float) -> float:
+    return math.sqrt(a ** 2 + b ** 2)
+    #must import math and math.sqrt()
+
 
 #exercise 82: Taxi Fare
-def taxi_fare():
-    distance_traveled = float(input("Please enter the distance traveled in kilometers:\n"))
-    cost = (((distance_traveled * 1000) / 140) * 0.25) + 4
-    print(f"The total cost is ${cost}.")
+def main_exercise82():
+    print("Welcome to the fare calculator.")
+    while True:
+        try:
+            km = float(input("Please enter the distance traveled in kilometers:\n"))
+            fare = calculate_taxi_fare(km)
+            if km < 0:
+                print("That is not a valid number.")
+                raise ValueError
+            break
+        except ValueError:
+            print("Must input a positive number.")
+    print(f"The cost is ${fare}.")
+
+def calculate_taxi_fare(distance: float) -> float:
+    meters = distance * 1000
+    fare = 4.00 + 0.25 * (meters / 140)
+    return fare
+
+
 
 #exercise 83: shipping calculator
-def shipping_calculator():
-    n_items = int(input("Please enter the number of items you'd like to purchase:\n"))
-    shipping_charge = ((n_items - 1) * 2.95) + 10.95)
-    print(f"The shipping charge is ${chipping_charge}.")
+def main_exercise83():
+    print("Shipping calculator")
+    while True:
+        try:
+            items = int(input("Enter the number of items: "))
+            shipping_cost = calc_shipping_cost(items)
+            if items < 0:
+                print("That is an invalid number of items.")
+                raise ValueError
+            break
+        except ValueError:
+            print("Must input an integer.")
+    print(f"The cost of shipping is ${shipping_cost}.")
 
+
+def calc_shipping_cost(items):
+    if items == 1:
+        return 10.95
+    elif items > 1:
+        return 10.95 + 2.95 * (items-1)
+
+    return 0
 #exercise 84: median of three values
 def median_of_three_values():
-    first_n = float(input("Please enter the first value:\n"))
-    second_n = float(input("Please enter the second value:\n"))
-    third_n = float(input("Please enter the third value:\n"))
-    if first_n < second_n < third_n:
-        print(f"{second_n}")
-    elif third_n < second_n < first_n:
-        print(f"{second_n}")
-    elif second_n < first_n < third_n:
-        print(f"{third_n}")
-    elif 
+    while True:
+        try:
+            first_n = float(input("Please enter the first value:\n"))
+            second_n = float(input("Please enter the second value:\n"))
+            third_n = float(input("Please enter the third value:\n"))
+            if first_n < second_n < third_n:
+                print(f"{second_n}")
+            elif third_n < second_n < first_n:
+                print(f"{second_n}")
+            elif second_n < first_n < third_n:
+                print(f"{third_n}")
+            elif third_n < first_n < second_n:
+                print(f"{third_n}")
+            elif first_n < third_n < second_n:
+                print(f"{third_n}")
+            elif second_n < third_n < first_n:
+                print(f"{third_n}")
+            break
+        except ValueError:
+            print("Must input a number.")
+
 #NO TIME TO COMPLETE    
 #FINISH LATER
-
+#https://repl.it/@DanielGallo/ICS3U-2021-01-04#main.py
 #exercise 85: convert an integer to its ordinal number
 def make_ordinal(n:int) -> str:
-    n = int(input("Please enter the integer: "))
-    string = ''
-    if n == 1:
-        string += 'first'
-    elif n == 2:
-        string += 'second'
-    elif n == 3:
-        string += 'third'    
-    elif n == 4:
-        string += 'forth'
-    elif n == 5:
-        string += 'fifth'
-    elif n == 6:
-        string += 'sixth'
-    elif n == 7:
-        string += 'seventh'
-    elif n == 8:
-        string += 'eighth'
-    elif n == 9:
-        string += 'ninth'
-    elif n == 10:
-        string += 'tenth'
-    elif n == 11:
-        string += 'eleventh'
-    elif n == 12:
-        string += 'twelvth'
+#        ordinal_map = {
+#
+#            1: "first",
+#            2: "second",
+#            3: "third",
+#            4: "third",
+#            5: "third",
+#            6: "third",
+#            7: "first",
+#            8: "second",
+#            9: "third",
+#            10: "third",
+#            11: "third",
+#            12: "third",            
+#        }
+#        return ordinal_map[n]
+        #method 2 below
+    while True:
+        try:
+            n = int(input("Please enter the integer: "))
+            string = ''
+            if n == 1:
+                string += 'first'
+            elif n == 2:
+                string += 'second'
+            elif n == 3:
+                string += 'third'    
+            elif n == 4:
+                string += 'forth'
+            elif n == 5:
+                string += 'fifth'
+            elif n == 6:
+                string += 'sixth'
+            elif n == 7:
+                string += 'seventh'
+            elif n == 8:
+                string += 'eighth'        
+            elif n == 9:
+                string += 'ninth'
+            elif n == 10:
+                string += 'tenth'
+            elif n == 11:
+                string += 'eleventh'
+            elif n == 12:
+                string += 'twelvth'
+            elif 1 > n or n > 12:
+                raise ValueError
+        except ValueError:
+            print("Must input a whole number between 1-12 (also can be 1-12).")
+
     print(f"The string is {string}.")
+
+if __name__ == "__main__":
+    main_exercise81()
+    main_exercise82()
+    main_exercise83()
+    median_of_three_values()
+    make_ordinal()
