@@ -1,0 +1,24 @@
+#center a string in the terminal
+main_exercise87():
+    print("Center string in terminal.")
+
+    string = input("Please enter the string:\n")
+    width = string[i]
+
+center_string():
+    if width < len(string):
+        return string
+    spaces = (width - ken(s))
+
+
+
+def tests():
+    assert center_string("a", 3) == " a"
+    assert center_string("aa", 4) == " aa"
+    assert center_string("b", 5) == "  b"
+    assert center_string("hello", 11) == "   hello"
+    print("all passed!")
+
+
+if __name__ == "__main__":
+    tests()
