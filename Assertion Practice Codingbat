@@ -9,13 +9,13 @@ def test_monkey_trouble():
 def test_sum_double():
     assert sum_double(1, 2) == 3
 
-def test_diff21(n):
+def test_diff21():
     assert diff(19) == 2
 
 def test_parrot_trouble(talking, hour):
     assert parrot_trouble(True, 6) == True
 
-def test_makes10(a, b):
+def test_makes10():
     assert makes10(9, 10) == True
 
 def test_near_hundred():
@@ -30,8 +30,8 @@ def test_not_string():
 def test_missing_char():
     assert missing_char('kitten', 1) == ktten
 
-def test_front_back(str):
+def test_front_back():
     assert front_back('code') == 'eodc'
 
-def test_front3(str):
+def test_front3():
     assert front3('Java') == 'JavJavJav'
