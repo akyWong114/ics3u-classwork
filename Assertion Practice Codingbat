@@ -1,0 +1,37 @@
+def test_sleep_in():
+    assert sleep_in(False, False) == True
+
+
+def test_monkey_trouble():
+    assert monkey_trouble(True, True) == True
+
+#complete 10-15
+def test_sum_double():
+    assert sum_double(1, 2) == 3
+
+def test_diff21(n):
+    assert diff(19) == 2
+
+def test_parrot_trouble(talking, hour):
+    assert parrot_trouble(True, 6) == True
+
+def test_makes10(a, b):
+    assert makes10(9, 10) == True
+
+def test_near_hundred():
+    assert near_hundred(93) == True
+
+def test_pos_neg():
+    assert pos_neg(1, -1, False) == True
+
+def test_not_string():
+    assert not_string('candy' ) == 'not candy'
+
+def test_missing_char():
+    assert missing_char('kitten', 1) == ktten
+
+def test_front_back(str):
+    assert front_back('code') == 'eodc'
+
+def test_front3(str):
+    assert front3('Java') == 'JavJavJav'
